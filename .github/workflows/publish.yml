@@ -18,6 +18,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
-      - run: npm publish dist
+      - run: npm publish dist # add `--access public` for scoped repos, as they are private by default
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
