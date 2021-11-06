@@ -3,21 +3,21 @@ import pkg from './package.json';
 import { dirname } from 'path';
 
 export default {
-	input: 'src/index.ts',
-	preserveModules: true,
-	plugins: [
-		typescript({ tsconfig: './tsconfig.main.json' })
-	],
-	output: [
-		{
-			dir: `dist/${dirname(pkg.main)}`,
-			entryFileNames: '[name].js',
-			format: 'cjs'
-		},
-		{
-			dir: `dist/${dirname(pkg.module)}`,
-			entryFileNames: '[name].mjs',
-			format: 'esm'
-		}
-	]
+  input: 'src/index.ts',
+  preserveModules: true,
+  plugins: [
+    typescript({ tsconfig: './tsconfig.main.json' })
+  ],
+  output: [
+    {
+      dir: `dist/${dirname(pkg.main)}`,
+      entryFileNames: '[name].js',
+      format: 'cjs'
+    },
+    {
+      dir: `dist/${dirname(pkg.module)}`,
+      entryFileNames: '[name].mjs',
+      format: 'esm'
+    }
+  ]
 };
