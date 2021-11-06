@@ -6,7 +6,7 @@ export default {
 	input: 'src/index.ts',
 	preserveModules: true,
 	plugins: [
-		typescript()
+		typescript({ tsconfig: './tsconfig.main.json' })
 	],
 	output: [
 		{

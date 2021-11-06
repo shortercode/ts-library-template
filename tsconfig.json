@@ -1,24 +1,8 @@
 {
 	"compilerOptions": {
-		"declaration": true,
-		"outDir": "./dist",
-		"lib": ["es2020"],
-		"removeComments": true,
-		"target": "es2020",
-		"strict": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"noImplicitReturns": true,
-		"noFallthroughCasesInSwitch": true,
-		"forceConsistentCasingInFileNames": true,
-		"esModuleInterop": true,
-		"moduleResolution": "node",
-		"importsNotUsedAsValues": "error"
+	  "allowJs": true
 	},
-	"include": [
-		"./src"
-	],
-	"exclude": [
-		"**/*.test.ts"
-	]
-}
+	"extends": "./tsconfig.main.json",
+	"include": ["**/*.ts", "**/*.js"],
+	"exclude": ["./dist", "./node_modules"]
+  }
