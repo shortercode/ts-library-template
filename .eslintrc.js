@@ -20,6 +20,10 @@ module.exports = {
     '@typescript-eslint'
   ],
   'rules': {
+    '@typescript-eslint/indent': [
+      'error',
+      2
+    ],
     '@typescript-eslint/naming-convention': [
       'error',
       // match const global primitives and ensure they use UPPER_CASE
